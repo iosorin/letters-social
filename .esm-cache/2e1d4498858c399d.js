@@ -1,26 +1,10 @@
-_b93‍.e([
-    ['User', () => User],
-    ['Post', () => Post],
-    ['Like', () => Like],
-    ['Comment', () => Comment]
-]);
-let uuid;
-_b93‍.w('node-uuid', [
-    [
-        'v4',
-        function(v) {
-            uuid = v;
-        }
-    ]
-]);
+_858‍.e([["User",()=>User],["Post",()=>Post],["Like",()=>Like],["Comment",()=>Comment]]);let uuid;_858‍.w('node-uuid',[["v4",function(v){uuid=v}]]);
 
 class User {
     constructor(config) {
         this.id = config.id || uuid();
         this.name = config.name;
-        this.profilePicture =
-            config.profilePicture ||
-            'https://react-sh.s3.amazonaws.com/assets/profile-pictures/1.jpeg';
+        this.profilePicture = config.profilePicture || '/static/assets/users/1.jpeg';
     }
 }
 
